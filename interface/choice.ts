@@ -7,6 +7,7 @@ interface Square {
 interface SquareConfig {
   color?: string;
   width?: number;
+  [propName: string]: any;
 }
 
 function createSquare(config: SquareConfig): Square {
@@ -21,7 +22,9 @@ function createSquare(config: SquareConfig): Square {
   return newSquare;
 }
 
-let mySquare = createSquare({})
-console.log(createSquare({}));
-console.log(createSquare({color:'blue',width:100}));
-console.log(createSquare({color:'yello'}));
+let squareOptions = {colour:'black',width:100}
+
+console.log(createSquare(squareOptions));
+
+console.log(createSquare({ color: "blue", width: 100 }));
+console.log(createSquare({ color: "yello" }));
