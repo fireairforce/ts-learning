@@ -19,7 +19,15 @@ class AccountingDepartment extends Department {
     console.log("The Accounting Department meets each Monday at 10am");
   }
 
-  generateReports():void{
-      console.log('Generating accounting reports...');
+  generateReports(): void {
+    console.log("Generating accounting reports...");
   }
 }
+let department: AccountingDepartment;
+department = new AccountingDepartment();
+// 他可以调用抽象类里面的方法，但是无法调用派生类里面的方法
+department.printName();
+department.printMeeting();
+
+// 这个地方就会报错
+department.generateReports();
