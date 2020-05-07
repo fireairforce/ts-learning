@@ -9,3 +9,10 @@ function printLabel(labelledObj: LabelledValue) {
 let myObj = { size: 10, label: "Size 10 object" };
 
 printLabel(myObj);
+
+
+interface Person {
+  readonly id: number;
+  name: string;
+  
+}
